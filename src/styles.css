@@ -1,0 +1,185 @@
+body {
+  color: #efefef;
+  font-family: "Jura", sans-serif;
+  margin: 0;
+}
+.container {
+  background: linear-gradient(
+    270deg,
+    hsla(270, 95%, 31%, 1) 40%,
+    hsla(252, 100%, 1%, 1) 70%
+  );
+  border: 5px solid #5000b0;
+  border-radius: 15px;
+  max-width: 75%;
+  margin-top: 15px;
+  padding: 30px;
+}
+.search-engine {
+  border-radius: 15px;
+  opacity: 90%;
+  padding-bottom: 15px;
+  width: 650px;
+}
+#current {
+  border-radius: 5px;
+  left: 670px;
+  padding: 7px 12px;
+  position: absolute;
+  top: 49px;
+  width: 90px;
+}
+.barcode {
+  font-family: "Libre Barcode 128", cursive;
+  font-size: 42px;
+  opacity: 85%;
+  position: absolute;
+  right: 300px;
+  top: 45px;
+}
+.chevron-tl {
+  font-size: 36px;
+  left: 200px;
+  opacity: 65%;
+  position: absolute;
+  top: 25px;
+  transform: rotate(225deg);
+}
+.chevron-tr {
+  font-size: 36px;
+  opacity: 65%;
+  position: absolute;
+  right: 200px;
+  top: 25px;
+  transform: rotate(315deg);
+}
+.alert-icon {
+  font-size: 42px;
+  position: absolute;
+  right: 240px;
+  top: 50px;
+}
+.interface {
+  border-left: 3px dashed;
+  border-right: 3px dashed;
+}
+.primary-weather {
+  padding-bottom: 50px;
+  margin-top: 0;
+}
+.main-hud {
+  border: 5px double;
+  border-radius: 50%;
+  display: block;
+  height: 315px;
+  margin: 0 auto;
+  width: 315px;
+}
+.outer-circle {
+  border: 5px dashed;
+  border-radius: 50%;
+  display: block;
+  height: 250px;
+  margin: 30px auto;
+  width: 250px;
+}
+.inner-circle {
+  border: 5px solid;
+  border-radius: 50%;
+  display: block;
+  height: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  width: 200px;
+}
+.cyberpunk-icons {
+  font-size: 50px;
+  padding-top: 10px;
+  text-align: right;
+}
+h1 {
+  color: #70f3d0;
+  font-size: 48px;
+  padding-top: 15px;
+  text-align: center;
+}
+h2 {
+  color: #30d5f7;
+  text-align: center;
+}
+.atmosphere-bar {
+  left: 80px;
+  opacity: 90%;
+  position: relative;
+  top: 20px;
+}
+.ozone-bar,
+.pollution-bar {
+  left: 80px;
+  opacity: 90%;
+  position: relative;
+}
+p {
+  font-size: 62px;
+  padding-top: 30px;
+  text-align: left;
+}
+.units {
+  font-size: 26px;
+  padding-top: 60px;
+  text-align: center;
+}
+#celcius,
+#fahrenheit {
+  color: #efefef;
+  text-decoration: none;
+}
+#celcius:hover {
+  color: #ff00cc;
+  text-decoration: underline;
+}
+#fahrenheit:hover {
+  color: #ff00cc;
+  text-decoration: underline;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  transform: scale(1.2);
+}
+strong {
+  font-size: 50px;
+}
+ul {
+  font-size: 20px;
+  font-weight: 500;
+  list-style: none;
+  position: relative;
+  right: 80px;
+}
+h6 {
+  color: #30d5f7;
+  font-size: 18px;
+}
+.col-2 {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+.chevron-bl {
+  font-size: 36px;
+  left: 200px;
+  opacity: 65%;
+  position: absolute;
+  bottom: 10px;
+  transform: rotate(135deg);
+}
+.chevron-br {
+  font-size: 36px;
+  opacity: 65%;
+  position: absolute;
+  right: 200px;
+  bottom: 10px;
+  transform: rotate(45deg);
+}
