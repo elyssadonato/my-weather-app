@@ -183,3 +183,8 @@ h6 {
   bottom: 10px;
   transform: rotate(45deg);
 }
+.author-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
