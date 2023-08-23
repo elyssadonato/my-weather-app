@@ -21,7 +21,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = [
@@ -54,8 +55,13 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function getForecast(coordinates) {
+  let apiKey = "8o3ccc0d0a7ft8b8a4d8aca2779a97af";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 function showCurrentWeather(response) {
-  console.log(response.data);
   fahrenheitTemperature = response.data.temperature.current;
   let temperatureElement = document.querySelector("p");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -69,11 +75,7 @@ function showCurrentWeather(response) {
   description.innerHTML = response.data.condition.description;
   let dateElement = document.querySelector("h2");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
-  );
+  getForecast(response.data.coordinates);
 }
 function search(city) {
   let apiKey = "8o3ccc0d0a7ft8b8a4d8aca2779a97af";
@@ -97,8 +99,6 @@ function showFahrenheitTemp(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 search("Chandler");
-displayForecast();
-
 let fahrenheitTemperature = null;
 
 let form = document.querySelector("#search-form");

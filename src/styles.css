@@ -33,13 +33,9 @@ h6 {
   color: #30d5f7;
   font-size: 22px;
 }
-#current {
-  border-radius: 5px;
-  left: 670px;
-  padding: 7px 12px;
-  position: absolute;
-  top: 49px;
-  width: 90px;
+#button {
+  display: block;
+  margin: 0 -100px;
 }
 #celcius,
 #fahrenheit {
