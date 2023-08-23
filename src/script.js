@@ -20,6 +20,32 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <img
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+      alt=""
+      id="icon"
+      />
+      <h6>${day}</h6>
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-max">112°</span>/
+        <span class="weather-forecast-min">84°</span>
+      </div>
+    </div>
+    `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function showCurrentWeather(response) {
   console.log(response.data);
   fahrenheitTemperature = response.data.temperature.current;
@@ -63,6 +89,7 @@ function showFahrenheitTemp(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 search("Chandler");
+displayForecast();
 
 let fahrenheitTemperature = null;
 
