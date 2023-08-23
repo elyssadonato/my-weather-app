@@ -32,11 +32,6 @@ ul {
 h6 {
   color: #30d5f7;
   font-size: 22px;
-  text-align: center;
-}
-#icon {
-  display: block;
-  margin: 0 auto;
 }
 #current {
   border-radius: 5px;
@@ -163,10 +158,8 @@ h6 {
   display: block;
   font-weight: 900;
   margin: 0 auto;
-  width: 100px;
-}
-.weather-forecast-temperature {
   text-align: center;
+  width: 130px;
 }
 .chevron-bl {
   font-size: 36px;
