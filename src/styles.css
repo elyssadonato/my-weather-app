@@ -47,10 +47,11 @@ h6 {
   text-decoration: underline;
 }
 .container {
+  background: hsla(269, 94%, 31%, 1);
   background: linear-gradient(
     270deg,
-    hsla(270, 95%, 31%, 1) 40%,
-    hsla(252, 100%, 1%, 1) 70%
+    hsla(269, 94%, 31%, 1) 30%,
+    hsla(240, 100%, 1%, 1) 57%
   );
   border: 5px solid #5000b0;
   border-radius: 15px;
