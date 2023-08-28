@@ -75,7 +75,6 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 function showCurrentWeather(response) {
-  console.log(response.data);
   fahrenheitTemperature = response.data.temperature.current;
   let temperatureElement = document.querySelector("p");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -101,25 +100,15 @@ function handleSubmit(event) {
   let cityInput = document.querySelector("#search-city-input");
   search(cityInput.value);
 }
-function showCelciusTemp(event) {
-  event.preventDefault();
-  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  let temperatureElement = document.querySelector("p");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("p");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 search("Chandler");
-let fahrenheitTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", showCelciusTemp);
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemp);

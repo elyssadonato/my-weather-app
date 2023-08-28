@@ -14,7 +14,7 @@ h2 {
   text-align: center;
 }
 p {
-  font-size: 62px;
+  font-size: 70px;
   padding-top: 30px;
   text-align: left;
 }
@@ -37,24 +37,22 @@ h6 {
   display: block;
   margin: 0 -100px;
 }
-#celcius,
 #fahrenheit {
   color: #efefef;
   text-decoration: none;
 }
-#celcius:hover {
-  color: #ff00cc;
-  text-decoration: underline;
-}
 .container {
   background: hsla(269, 94%, 31%, 1);
   background: linear-gradient(
-    270deg,
+    300deg,
     hsla(269, 94%, 31%, 1) 30%,
-    hsla(240, 100%, 1%, 1) 57%
+    hsla(240, 100%, 1%, 1) 55%
   );
   border: 5px solid #5000b0;
   border-radius: 15px;
+  max-width: 75%;
+  margin-top: 15px;
+  padding: 30px;
   max-width: 75%;
   margin-top: 15px;
   padding: 30px;
@@ -147,7 +145,7 @@ h6 {
   position: relative;
 }
 .units {
-  font-size: 26px;
+  font-size: 32px;
   padding-top: 60px;
   text-align: center;
 }
@@ -179,11 +177,4 @@ h6 {
   display: block;
   margin: 0 auto;
   text-align: center;
-}
-.units .active {
-  color: #ff00cc;
-  cursor: default;
-}
-.units .active:hover {
-  text-decoration: none;
 }
